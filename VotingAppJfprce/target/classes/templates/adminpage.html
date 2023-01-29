@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http=www.thymeleaf.org">
+	<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link th:href="@{/css/main.css}" rel="stylesheet">
+	</head>
+	<body>
+	     <h1 style="color: black">Voting Details</h1>
+	      
+	       <table class="table">
+     		<tr>
+        	     	 <th>candidateName</th>
+       				 <th>total vote count</th>
+    	 	 </tr>
+          
+		     <tr th:each="v: ${votes}">
+			 		 <td th:text="${v.candidateName}"></td>
+	          		 <td th:text="${v.total}"></td> 
+		     </tr>
+	       </table>
+	       
+	       
+	     
+	</body>
+</html>

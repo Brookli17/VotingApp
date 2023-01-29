@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http=www.thymeleaf.org">
+	<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link th:href="@{/css/main.css}" rel="stylesheet">
+	</head>
+	<body>
+	
+		<center><h1>Register to start Voting</h1><br>
+	   <p style="color: red;" th:text="${error}"></p>
+	   
+	
+	  <form th:action="@{/register}" method="post" th:object="${user}" action="#">
+		  <div class="mb-3">
+		    <label for="exampleInputName1" class="form-label">Username</label>
+		    <input name="username" type="text" class="form-control" id="exampleInputName1" th:field="*{username}" required>
+		  </div>
+		  <div class="mb-3">
+		    <label for="exampleInputEmail1" class="form-label">Email</label>
+		    <input name="email" type="email" class="form-control" id="exampleInputEmail1" th:field="*{email}" required>
+		  </div>
+		  <div class="mb-3">
+		    <label for="exampleInputPassword1" class="form-label">Password</label>
+		    <input name="password" type="password" class="form-control" id="exampleInputPassword1" th:field="*{password}" required>
+		  </div>		  
+		  <div class="mb-3">
+		    <label for="exampleInputPhone1" class="form-label">Contact No:</label>
+		    <input name="phoneNo" type="text" class="form-control" id="exampleInputName1" th:field="*{phoneNo}"required>
+		  </div>		  
+		  <button type="submit" class="btn btn-primary">Register</button>
+		  <a href="/" class="btn btn-primary">Login</a>
+		</form>	
+		
+		
+		
+		</center>	
+	</body>
+</html>
